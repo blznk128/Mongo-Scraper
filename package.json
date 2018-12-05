@@ -1,0 +1,22 @@
+{
+  "name": "Mongo-Scraper-NYT-master",
+  "version": "1.0.0",
+  "description": "This app scrapes the NYT website and provides users the functionality to view the news, save an article, leave comments in regards to each article and delete the comments and articles as well.",
+  "main": "server.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.14",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Mongo Scraper</title>
+      <script src="https://code.jquery.com/jquery.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+      <h1 id = "mainId">Mongo Scraper</h1>
+    <div class="container">
+      <div class= "row" id= menu-bar>
+          <div class="col-md-6">
+            <div class= "row">
+              <div class= "col-md-2" id="home"><button type="button" class = "btn btn-primary">Home</button></div>
+              <div class= "col-md-3" id="savedArticles"><button type="button" class = "btn btn-primary">Saved Articles</button></div>
+              <div class= "col-md-2" id="btn-holder">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="scrape">Scrape It Up!</button>
+              </div>
+            </div>
+          </div>
+      </div>
+            
+      <br>
+      <div class="row">
+        <div id="headings"><h1>No Scraped Articles</h1></div>
+        <table class="table table-striped" id="nyt-articles">
+      <thead >
+        <tr>
+          <th scope="col">Title</th>
+          <th scope="col">Summary</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!--Results -->
+      </tbody>
+    </table>
+      </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Articles Scraped</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Scraped Some Articles
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="comment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-article-id="my_id_value">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Notes</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body comment_list">  
+          </div>
+          <form>
+            <fieldset>
+              <textarea style="margin:7px;" id = "myTextArea"
+                      rows = "3"
+                      cols = "80">
+              </textarea>
+            </fieldset>
+          </form>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary saveComments" >Save</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div> 
+    <script src="app.js" type="text/javascript"></script>
+  </body>
+</html>
