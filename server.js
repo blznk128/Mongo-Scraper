@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static("public"));
 
 mongoose.Promise = Promise;
-var databaseUri = 'mongodb://localhost/NYT';
+var databaseUri = "mongodb://localhost/unit18Populater";
 if(process.env.MONGODB_URI){
 	databaseUri=process.env.MONGODB_URI;
 }
