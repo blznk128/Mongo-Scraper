@@ -34,7 +34,7 @@ app.get("/scrape", function(req, res) {
       var result = {};
       result.title = $(this)
         .children(".headline")
-        .text().replace(/ +(?= )/g,'').replace(/\n/g,'');
+        .text().replace()
       result.summary = $(this)
         .children(".summary")
         .text();
@@ -51,7 +51,6 @@ app.post("/api/save", function(req, res){
   db.Article
     .create(req.body)
     .then(function(dbArticle) {
-      console.log("Article saved");
     })
     .catch(function(err) {
       res.json(err);

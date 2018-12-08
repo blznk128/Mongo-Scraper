@@ -51,19 +51,13 @@ $(document).ready(function(){
       $("#headings").html("<h1>Scraped Articles</h1>");
       for(var i=0; i < data.length; i++){
         $("#nyt-articles").append(
-        "<tbody><tr><td>" +data[i].title+"</td>"+
-                "<td>" + data[i].summary+"</td>"+
-                "<td><button class='btn btn-success save'> Save Article </button></td></tr></tbody>"
+        "<tbody><tr><td>" +data[i].title + "</td>" + "<td>" + data[i].summary+"</td>"+ "<td><button class='btn btn-success save'> Save Article </button></td></tr></tbody>"
         );
       }
       saveThis();
     });
   });
 
-  $("#home").on("click", function(event){
-    event.preventDefault();
-    window.location ="/articles";
-  });
 
   $("#savedArticles").on("click", function(event){
     event.preventDefault();
@@ -78,9 +72,7 @@ $(document).ready(function(){
 
       for(var i=0; i < data.length; i++){
         $("#nyt-articles").append(
-        "<tbody><tr id ="+ data[i]._id+" ><td>" +data[i].title+"</td>"+
-                "<td>" + data[i].summary+"</td>"+
-                "<td><button class='btn btn-success articleComments' data-toggle='modal' data-target='#comment' data-id="+data[i]._id+" >Article Notes</button></td><td><button class='btn btn-danger delete'>Delete Article</button></td></tr></tbody>"
+        "<tbody><tr id =" + data[i]._id + " ><td>" + data[i].title+"</td>" + "<td>" + data[i].summary+"</td>" + "<td><button class='btn btn-success articleComments' data-toggle='modal' data-target='#comment' data-id="+data[i]._id+" >Article Notes</button></td><td><button class='btn btn-danger delete'>Delete Article</button></td></tr></tbody>"
         );
       }
       deleteArticle();
@@ -100,7 +92,7 @@ $(document).ready(function(){
       for(var i=0; i<data.comment.length; i++){
         console.log(data.comment.length);
         $(".comment_list").append(
-          "<tbody><tr id="+data.comment[i]._id+"><td>&bull;  "+data.comment[i].body+"  <button class='btn btn-danger deleteComment'>X</button>"
+          "<tbody><tr id="+data.comment[i]._id + "><td>&bull;  "+ data.comment[i].body+ "  <button class='btn btn-danger deleteComment'>X</button>"
         );
       }
       deleteNotes();
