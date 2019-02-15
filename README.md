@@ -26,5 +26,5 @@ Users should also be able to leave comments on the articles displayed and revisi
 
 Benny's explanation: This application will scrape or "get" information from the new york times website. It will then load all this information into a database. User can then click any article to save, they can click on the "saved article" button and it will bring up the articles they saved. They can delete the article out of the saved section or leaves notes. Each note can be saved and multiple notes can be added for future reference. These notes can also be deleted.
 
-Heroku link https://dashboard.heroku.com/apps/ancient-beyond-80294 
-My portfolio https://blznk128.github.io/#portfolioJump
+Heroku link https://dashboard.heroku.com/apps/ancient-beyond-80294 <br>
+My portfolio www.bennyborunda.com
